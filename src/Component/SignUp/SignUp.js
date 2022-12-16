@@ -1,9 +1,31 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import "./SignUp.css"
 import signuppic from "../../Assets/signUppic.jpg"
+import { useDispatch } from "react-redux";
+import {useNavigate} from "react-router-dom";
+import {loginuser} from "../actionreducers/actioncreators/index"
 
 function SignUp() {
+  const navigate =useNavigate();
+  const dispatch =useDispatch()
+  const [signUp,setSignUp]=useState({
+    name:"",
+    email:"",
+    password:""
+  })
+ console.log(signUp);
+  const SignUpChange=(e)=>{
+ const {name ,value}=e.target;
+ setSignUp({...signUp,[name]:value});
+  }
+
+  function SignUpdata (e){
+    e.preventDefault();
+    console.log("jhvcbjh");
+    dispatch(loginuser(navigate,signUp))
+  }
+
   return (
     <div className='signUp d-flex flex-row align-items-center justify-content-between'>
       <div className='leftDiv'>
@@ -28,20 +50,20 @@ function SignUp() {
           <form className=''>
             <div class="row mb-3">
               <div class="col-sm-12">
-                <input type="name" class="form-control signUpInputs" id="name" placeholder='Name' />
+                <input type="name" class="form-control signUpInputs" id="name" placeholder='Name' value={signUp.name} name ="name" onChange={SignUpChange} />
               </div>
             </div>
             <div class="row mb-3">
               <div class="col-sm-12">
-                <input type="email" class="form-control signUpInputs" id="inputEmail3" placeholder='Email' />
+                <input type="email" class="form-control signUpInputs" id="inputEmail3" placeholder='Email' value={signUp.email} name ="email" onChange={SignUpChange} />
               </div>
             </div>
             <div class="row mb-3">
               <div class="col-sm-12">
-                <input type="password" class="form-control signUpInputs" id="inputPassword3" placeholder='Password' />
+                <input type="password" class="form-control signUpInputs" id="inputPassword3" placeholder='Password' value={signUp.password} name ="password" onChange={SignUpChange}  />
               </div>
             </div>
-            <button type="submit" class="btn w-50 my-3 signUpBtn">Sign Up</button>
+            <button type="submit" class="btn w-50 my-3 signUpBtn" onClick={SignUpdata}>Sign Up</button>
           </form>
           <Link to="/sign-in" className='alreadyAcnt'>
           <p className="text-center my-0">
