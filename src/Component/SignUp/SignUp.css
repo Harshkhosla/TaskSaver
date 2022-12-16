@@ -1,0 +1,183 @@
+.signuppic {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 30rem;
+    -webkit-filter: blur(2px);
+    filter: blur(2px);
+}
+
+.signUpBtn{
+    background-color: #D7B586;
+    border-color:#D7B586;
+    color: white;
+}
+.signUpBtn:hover{
+    background-color: #c9a068;
+    border-color:#D7B586;
+    color: white;
+}
+.signUpInputs::placeholder {
+    font-size: 16px;
+  }
+
+.leftDiv{
+    position: relative;
+}
+
+.welcomeText{
+    font-size:3rem;
+}
+
+.formDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30rem;
+    height: 33rem;
+}
+
+.signUpInputs{
+    width: 20rem;
+    background-color: rgb(229, 230, 233);
+    border-color: rgb(229, 230, 233);
+}
+
+.SignuprightDiv{
+    position: relative;
+    width: 40rem;
+    height: 30rem;
+}
+
+.imgText{
+    position: absolute;
+    top: 28%;
+    left: 25%;
+    color: rgb(60, 54, 54);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+}
+
+.alreadyAcnt{
+    text-decoration: none !important;
+}
+
+@media only screen and (max-device-width: 764px){
+    .leftDiv{
+       display: none;
+    }
+    .SignuprightDiv{
+        height: max-content;
+        justify-content: center;
+        align-items: center;
+        margin-top: 4rem;
+    }
+    
+    .formDiv{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 21.5rem;
+        height: 30rem;
+        margin: auto;
+    }
+    .signUpInputs{
+        width: 16rem;
+        background-color: rgb(229, 230, 233);
+        border-color: rgb(229, 230, 233);
+    }
+}
+@media only screen and (min-device-width: 766px) and (max-device-width: 1026px){
+    .signuppic {
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        width: 22rem;
+        -webkit-filter: blur(2px);
+        filter: blur(2px);
+    }
+    .leftDiv{
+        position: relative;
+    }
+    /* .SignuprightDiv{
+        margin-right: 5rem !important;
+    } */
+    .imgText{
+        position: absolute;
+        top: 30%;
+        left: 6%;
+        color: rgb(60, 54, 54);
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+    }
+
+.formDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 22rem;
+    height: 30rem;
+    margin: auto;
+}
+}
+
+@media only screen and (min-device-width: 1028px) and (max-device-width: 1440px){
+    .signuppic {
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        width: 35rem;
+        -webkit-filter: blur(2px);
+        filter: blur(2px);
+    }
+    /* .SignuprightDiv{
+        margin-right: 5rem !important;
+    } */
+}
+@media only screen and (min-device-width: 1442px){
+
+    .signUp{
+        padding-right: 25rem;
+    }
+    .signuppic {
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        width: 50rem;
+        -webkit-filter: blur(2px);
+        filter: blur(2px);
+    }
+        
+    .formDiv{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 35rem;
+        height: 100rem;
+        margin: auto;
+        margin-left: 5rem;
+    }
+    .leftDiv{
+        position: relative;
+    }
+    .SignuprightDiv{
+        margin-right: 5rem !important;
+    }
+
+    .imgText{
+        position: absolute;
+        top: 30%;
+        left: 10%;
+        color: rgb(60, 54, 54);
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+    }
+
+    .imgText>h1{
+        font-size: 6rem;
+    }
+    .imgText>h5{
+        font-size: 3rem;
+    }
+}

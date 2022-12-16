@@ -1,0 +1,64 @@
+.tableDiv{
+    border-radius: .5rem;
+    position: relative;
+}
+/* th,
+td {
+  border: 1px solid black;
+  width: 300px;
+  overflow: hidden;
+} */
+table {
+    border: 1px solid black;
+    table-layout: fixed;
+    /* width: 400px; */
+  }
+  
+  th,
+  td {
+    border: 1px solid black;
+    width: 200px;
+    overflow: hidden;
+    text-align: center;
+  }
+  .Date{
+    width: 50px !important;
+  }
+  .Time{
+    width: 100px !important;
+  }
+  .Total_Time{
+    width: 100px !important;
+  }
+  .Status{
+    width: 10rem !important;
+  }
+  .statussec:focus{
+    box-shadow: none;
+    border: 1px solid black;
+  }
+  .statussec{
+    cursor: pointer;
+  }
+.Home{
+    margin-top: 4.5rem !important;
+}
+.Calendar{
+    font-size: 1rem !important;
+    margin-bottom: .7rem;
+}
+
+.saveButton{
+    position: fixed;
+    bottom: 2.5rem;
+    right: 2rem;
+    width: 5rem;
+}
+
+td>select>:focus{
+  border: 2px solid black;
+}
+
+@media only screen and (max-device-width:768px){
+    
+}

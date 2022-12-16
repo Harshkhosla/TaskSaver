@@ -1,0 +1,108 @@
+
+.loginInput{
+    width: 25rem;
+}
+
+.forgotPassword{
+    color:  #8A6EFD;
+    cursor: pointer;
+}
+.forgotPassword:hover{
+   text-decoration: underline !important;
+}
+.loginBtn{
+    width: 12rem;
+    margin: auto;
+}
+
+.loginBtn:hover{
+    background-color: #2d69c3 !important;
+}
+
+.loginInput::placeholder {
+    font-size: 16px;
+  }
+
+.createAccountBtn{
+    background-color: #3BB792;
+}
+.createAccountBtn:hover{
+    background-color: #00b37d !important;
+}
+
+.loginLink:hover{
+    cursor: pointer;
+    text-decoration: underline !important;
+}
+
+.rightDiv>input{
+    border: 1px solid gray !important;
+}
+
+@media only screen and (min-device-width: 280px) and (max-device-width: 425px){
+    .LoginPage{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 5px !important;
+    }
+    .leftDiv{
+        margin-top: 2rem !important;
+    }
+    .rightDiv{
+        margin-top: 4rem !important;
+        width: 20rem;
+        margin-bottom: 1rem;
+
+    }
+    .createAccountBtn{
+        padding-top: 5px !important;
+        padding-bottom: 5px !important;
+    }
+
+    .loginInput{
+        width: 16rem !important;
+    }
+
+    input,
+    input::placeholder {
+    font: 10px sans-serif;
+}
+}
+
+@media only screen and (min-device-width: 500px) and (max-device-width: 770px){
+    
+    .LoginPage{
+        margin-top: 5rem !important;
+    }
+    .rightDiv{
+        height: 24rem !important;
+    }
+}
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1438px){
+    .LoginPage{
+        margin-top: 8rem !important;
+    }
+    .rightDiv{
+        padding-top: 2rem;
+        width: 30rem;
+        height: 24rem;
+    }
+}
+@media only screen and (min-device-width: 1440px) and (max-device-width: 1800px){
+    .LoginPage{
+        margin-top: 12rem !important;
+    }
+}
+@media only screen and (min-device-width: 1802px) and (max-device-width: 2560px){
+    .LoginPage{
+        margin-top: 25rem !important;
+    }
+    .rightDiv{
+        padding-top: 2rem !important;
+        width: 30rem !important;
+        height: 26rem !important;
+    }
+}
