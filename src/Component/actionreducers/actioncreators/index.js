@@ -3,12 +3,14 @@ import { toast,ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 
-export const loginuser =(input)=>{
+export const loginuser = (input)=>{
+    // debugger;
+    console.log(input);
     // debugger;
     return (dispatch)=>{
         const{name, email, password}=input;
-        debugger;
-        fetch("http://localhost:5000/api/auth/createuser", { 
+        // debugger;
+       fetch("http://localhost:5000/api/auth/createuser", { 
            
          method: "POST",
          headers: {

@@ -8,7 +8,7 @@ import {loginuser} from "../actionreducers/actioncreators/index"
 
 function SignUp() {
   const navigate =useNavigate();
-  const dispatch =useDispatch()
+  const dispatch =useDispatch();
   const [signUp,setSignUp]=useState({
     name:"",
     email:"",
@@ -23,7 +23,7 @@ function SignUp() {
   function SignUpdata (e){
     e.preventDefault();
     console.log("jhvcbjh");
-    dispatch(loginuser(navigate,signUp))
+    dispatch(loginuser(signUp))
   }
 
   return (
