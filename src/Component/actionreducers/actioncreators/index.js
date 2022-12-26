@@ -45,3 +45,63 @@ export const loginuser = (input)=>{
 
     }
 }
+const logindata=(amount)=>{
+  return {
+      type:"logindata",
+      payload:amount
+  }
+}
+export const signItUp=(navigate,field)=>{
+  console.log(field);
+  debugger;
+  return  (dispatch)=>{
+      const { email, password} = field;
+      
+
+       fetch("http://localhost:5000/api/auth/login", {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+  
+        body: JSON.stringify({
+          email,
+          password,
+        }),
+      })
+        .then((response) => response.json())
+        
+        
+        .then((response) => {
+          toast.success(response?.toast)
+          // console.log(response,"casdvas")
+          
+  
+          if (!response?.success) {
+            throw Error(response.error)
+          }
+          // debugger;
+          localStorage.setItem("Authorization", JSON.stringify(response.authtoken));           
+          dispatch(authtoken(JSON.stringify(response.authtoken).replaceAll('"','')))
+          navigate("/home")
+        
+          
+        })
+        .catch((err) => {
+          console.log(err,"cvdsavs");
+          // setError(err.message);
+          // toast.error(err?.message);
+          
+  
+        });
+
+  }
+
+}
+const authtoken=(amount)=>{
+  // debugger;
+  return{
+      type:'authtoken',
+      payload:amount
+  }
+}

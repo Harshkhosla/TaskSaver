@@ -2,19 +2,28 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import fbImage from "../../Assets/fbImage.svg"
 import "./SignIn.css"
+import { useDispatch } from "react-redux";
+import {useNavigate} from "react-router-dom";
+import {signItUp} from "../actionreducers/actioncreators/index"
 
 function SignIn() {
-
+  const navigate =useNavigate();
+  const dispatch =useDispatch();
   const [fields, setFields] = useState({
     email:"",
-    pass:""
+    password:""
   })
-
+ console.log(fields);
   const onchange = (e)=>{
     const value = e.target.value;
     const name = e.target.name;
     setFields({...fields, [name]:value})
   }
+  function signUpData(e){
+    e.preventDefault();
+    dispatch(signItUp(navigate,fields))
+    
+    }
   console.log(fields);
   return (
     <div className="container d-flex align-items-center justify-content-around mx-auto LoginPage">
@@ -30,10 +39,10 @@ function SignIn() {
         <input className="loginInput px-2 py-2 my-2 mx-4 border border-1 
         rounded-2" type="text" placeholder="Email address or phone number" name='email' onChange={onchange} value={fields.email} />
         <input className=" loginInput px-2 py-2 my-2 mx-4 border border-1 
-        rounded-2" type="password" placeholder="Password" name='pass' onChange={onchange} value={fields.pass} />
-        <Link to="/home" className="
+        rounded-2" type="password" placeholder="Password" name='password' onChange={onchange} value={fields.password} />
+        <button   className="
          bg-primary btn btn-primary
-        text-white my-2 py-2 mx-4 rounded-2 border-0 loginBtn ">Log In</Link>
+        text-white my-2 py-2 mx-4 rounded-2 border-0 loginBtn "type="submit" onClick={signUpData}>Log In</button>
         
         <a className="
         forgotPassword

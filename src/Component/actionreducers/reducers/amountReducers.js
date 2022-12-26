@@ -1,5 +1,5 @@
 const initialState={
-
+    authtoken:[],
 }
 
 const reducer =(state=initialState,action)=>{
